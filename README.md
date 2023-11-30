@@ -50,6 +50,6 @@ Experimenting with hyperparameters, such as batch size, learning rate, and other
 Model Testing:  
 Employing a test set for the final evaluation of the model's performance on new images with ships.
 
-Saving the Model [model](model):  
+Saving the Model [/model](model):  
 Saving the trained model for future use in other scenarios or for making predictions on new data.
 
