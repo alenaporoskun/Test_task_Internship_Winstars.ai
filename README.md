@@ -12,10 +12,10 @@ The goal of the test project is to build a semantic segmentation model. Prefered
 
 Results of your work should contain next:
 *	link to GitHub repository with all source codes;
-*	code for model training and model inference should be separated into different .py files;
-*	readme.md file with complete description of solution;
-*	requirements.txt with required python modules;
-*	jupyter notebook with exploratory data analysis of the dataset;
+*	code for model training and model inference should be separated into different .py files ([train.py](train.py), [test.py](test.py));
+*	readme.md file with complete description of solution ([README.md](README.md));
+*	requirements.txt with required python modules ([requirements.txt](requirements.txt));
+*	jupyter notebook with exploratory data analysis of the dataset ([Exploratory_data_analysis.ipynb](Exploratory_data_analysis.ipynb));
 *	any other things used during the working with task;
   
 *	Source code should be well readable and commented;
@@ -91,3 +91,7 @@ If the model performance is not satisfactory, consider fine-tuning the model, ad
 * Deployment:  
 Once satisfied with the model's performance on the test set, the model can be deployed for making predictions on new, unseen data.  
 The specific steps and metrics for testing may vary based on the segmentation task and the nature of the data.
+
+
+## References
+[https://www.kaggle.com/code/aditya100/airbus-ship-detection-unet](https://www.kaggle.com/code/aditya100/airbus-ship-detection-unet)
