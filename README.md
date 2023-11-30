@@ -22,34 +22,72 @@ Results of your work should contain next:
 *	Project has to be easy to deploy for testing;
 
 
-**Training a model for image segmentation ([train.py](train.py)), particularly for detecting the presence of ships in images, involves the following steps:**
+## Training ([train.py](train.py))
+
+**Training a model for image segmentation, particularly for detecting the presence of ships in images, involves the following steps:**
   
-Data Preparation:  
+* Data Preparation:  
 Loading training images that include ship images along with corresponding masks indicating the ship locations.
 Splitting the data into training and validation sets.
   
-Building a U-Net Model for Segmentation:  
+* Building a U-Net Model for Segmentation:  
 Defining the architecture of the U-Net model capable of reproducing images and capturing spatial information.
 Adding an input layer, encoder, a multi-level bottleneck, and a decoder.
 Using the sigmoid activation function in the final layer to obtain segmentation masks.
   
-Compiling the Model:  
+* Compiling the Model:  
 Choosing a loss function (e.g., binary cross-entropy) and an optimizer (e.g., Adam).
 Selecting metrics for evaluating segmentation accuracy.
 
-Training the Model:  
+* Training the Model:  
 Using training images and corresponding masks to improve the model parameters.
 Adjusting the number of epochs and other hyperparameters to achieve satisfactory results.
 
-Model Evaluation:  
+* Model Evaluation:  
 Utilizing the validation set to assess segmentation accuracy and avoid overfitting.
 
-Parameter Tuning:  
+* Parameter Tuning:  
 Experimenting with hyperparameters, such as batch size, learning rate, and others, to optimize training.
   
-Model Testing:  
+* Model Testing:   
 Employing a test set for the final evaluation of the model's performance on new images with ships.
 
-Saving the Model [/model](model):  
+* Saving the Model [/model](model):  
 Saving the trained model for future use in other scenarios or for making predictions on new data.
+  
 
+## Testing ([test.py](test.py))
+
+Results - [/result-image](result-image).
+
+Testing a segmentation model involves evaluating its performance on a separate set of test images that were not used during training. Here are the general steps for testing a segmentation model:
+  
+* Load the Pre-trained Model:  
+Load the saved model that was trained on the training data.
+  
+* Prepare Test Data:  
+Collect a set of test images that the model has not seen before.  
+If ground truth masks are available for the test images, they can be used for evaluation.
+  
+* Preprocess Test Images:  
+Preprocess the test images in the same way as the training images (resize, normalization, etc.).
+  
+* Model Inference:  
+Use the pre-trained model to make predictions on the test images.
+  
+* Post-process Predictions:  
+If necessary, post-process the model predictions. This might involve thresholding, morphological operations, or other techniques depending on the specific segmentation task.  
+  
+* Evaluation Metrics:  
+If ground truth masks are available for the test set, compute evaluation metrics such as Intersection over Union (IoU), Dice coefficient, accuracy, etc.  
+Compare the model predictions with the ground truth to assess the quality of segmentation.
+  
+* Visualization:  
+Visualize the test images along with the model predictions to qualitatively assess how well the model is performing.
+  
+* Iterative Improvement:  
+If the model performance is not satisfactory, consider fine-tuning the model, adjusting hyperparameters, or collecting additional labeled data for retraining.
+  
+* Deployment:  
+Once satisfied with the model's performance on the test set, the model can be deployed for making predictions on new, unseen data.  
+The specific steps and metrics for testing may vary based on the segmentation task and the nature of the data.
