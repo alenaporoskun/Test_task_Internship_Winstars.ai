@@ -17,7 +17,7 @@ Results of your work should contain next:
 *	requirements.txt with required python modules;
 *	jupyter notebook with exploratory data analysis of the dataset;
 *	any other things used during the working with task;
-
+  
 *	Source code should be well readable and commented;
 *	Project has to be easy to deploy for testing;
 
