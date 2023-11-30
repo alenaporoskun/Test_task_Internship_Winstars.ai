@@ -23,33 +23,33 @@ Results of your work should contain next:
 
 
 **Training a model for image segmentation ([train.py](train.py)), particularly for detecting the presence of ships in images, involves the following steps:**
-
-Data Preparation:
+  
+Data Preparation:  
 Loading training images that include ship images along with corresponding masks indicating the ship locations.
 Splitting the data into training and validation sets.
-
-Building a U-Net Model for Segmentation:
+  
+Building a U-Net Model for Segmentation:  
 Defining the architecture of the U-Net model capable of reproducing images and capturing spatial information.
 Adding an input layer, encoder, a multi-level bottleneck, and a decoder.
 Using the sigmoid activation function in the final layer to obtain segmentation masks.
-
-Compiling the Model:
+  
+Compiling the Model:  
 Choosing a loss function (e.g., binary cross-entropy) and an optimizer (e.g., Adam).
 Selecting metrics for evaluating segmentation accuracy.
 
-Training the Model:
+Training the Model:  
 Using training images and corresponding masks to improve the model parameters.
 Adjusting the number of epochs and other hyperparameters to achieve satisfactory results.
 
-Model Evaluation:
+Model Evaluation:  
 Utilizing the validation set to assess segmentation accuracy and avoid overfitting.
 
-Parameter Tuning:
+Parameter Tuning:  
 Experimenting with hyperparameters, such as batch size, learning rate, and others, to optimize training.
   
-Model Testing:
+Model Testing:  
 Employing a test set for the final evaluation of the model's performance on new images with ships.
 
-Saving the Model:
+Saving the Model:  
 Saving the trained model for future use in other scenarios or for making predictions on new data.
 
